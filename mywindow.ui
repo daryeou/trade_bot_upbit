@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1137</width>
+    <height>845</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>845</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2" rowstretch="3,1">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="tabWidget0">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab0">
+         <attribute name="title">
+          <string>코인현황</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0" columnstretch="0,0,0">
+          <item row="0" column="0" colspan="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1,3,1,20,0">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>계산주기 :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="timeLevel">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0: 1분, 1: 3분, 2: 5분, 3: 10분, 4: 15분, 5: 30분, 6: 1시간, 7: 4시간, 8: 1일 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Price :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="purchasePrice"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Coin List : </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="coinNameLine">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;KRW-XPR,KRW-ENJ,... 와 같이 추가해주세요&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;KRW-XPR,KRW-ENJ,... 와 같이 추가해주세요&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="optimizationButton">
+              <property name="text">
+               <string>최적화</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="sell_bt">
+            <property name="text">
+             <string>전 종목 매도(긴급버튼)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>SecretKey</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="purchase">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="3">
+           <widget class="QTableWidget" name="coinPriceWidget">
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>90</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>코인명</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Speed,수익률</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>현재가</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>K, window</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Real_AVG</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Target</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>매도점</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>짧은변동률</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>매수가(매도호가)</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>매도량</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>매수량</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>상승장/하락장</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>AccessKey</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="AccessKey"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="SecretKey"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab1">
+         <attribute name="title">
+          <string>로그인정보</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab2">
+         <attribute name="title">
+          <string>설정</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPlainTextEdit" name="logWidget"/>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="purchasedList">
+        <column>
+         <property name="text">
+          <string>매수</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>평단가</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="marketInfoWidget">
+        <column>
+         <property name="text">
+          <string>Market</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1137</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Start(M)</string>
+    </property>
+    <addaction name="menuInfo"/>
+    <addaction name="menuExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="menuInfo">
+   <property name="text">
+    <string>정보</string>
+   </property>
+   <property name="statusTip">
+    <string>정보</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="menuExit">
+   <property name="text">
+    <string>끝내기</string>
+   </property>
+   <property name="statusTip">
+    <string>끝내기(미동작)</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
